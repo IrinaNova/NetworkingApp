@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func getJSON() {
-        guard let url = URL(string: "https://www.boredapi.com/api/activity") else {return} //"https://apod.nasa.gov/apod/image/2212/SkyArt_Cobianchi_1024.jpg") else {return}
+        guard let url = URL(string: "https://go-apod.herokuapp.com/apod") else {return}
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
                 return
             }
             do {
-                let info = try JSONDecoder().decode(Activity.self, from: data)
+                let info = try JSONDecoder().decode(Apod.self, from: data)
                 print (info)
             } catch let error {
                 print(error)

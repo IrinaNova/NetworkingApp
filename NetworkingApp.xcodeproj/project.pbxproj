@@ -13,7 +13,10 @@
 		802AAB492948F42100A57E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802AAB472948F42100A57E04 /* Main.storyboard */; };
 		802AAB4B2948F42200A57E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802AAB4A2948F42200A57E04 /* Assets.xcassets */; };
 		802AAB4E2948F42200A57E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802AAB4C2948F42200A57E04 /* LaunchScreen.storyboard */; };
-		802AAB5A2948F4F600A57E04 /* apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802AAB592948F4F600A57E04 /* apod.swift */; };
+		802AAB5A2948F4F600A57E04 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802AAB592948F4F600A57E04 /* Apod.swift */; };
+		80C273AC294F681D003872C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C273AB294F681D003872C3 /* NetworkManager.swift */; };
+		80C273AF294F6D69003872C3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C273AE294F6D69003872C3 /* ImageViewController.swift */; };
+		80C273B1294F74D0003872C3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C273B0294F74D0003872C3 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,10 @@
 		802AAB4A2948F42200A57E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		802AAB4D2948F42200A57E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		802AAB4F2948F42200A57E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		802AAB592948F4F600A57E04 /* apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apod.swift; sourceTree = "<group>"; };
+		802AAB592948F4F600A57E04 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
+		80C273AB294F681D003872C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		80C273AE294F6D69003872C3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		80C273B0294F74D0003872C3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 				802AAB552948F44200A57E04 /* App */,
 				802AAB562948F44E00A57E04 /* ViewControllers */,
 				802AAB572948F45F00A57E04 /* Storyboards */,
+				80C273AD294F682C003872C3 /* Services */,
 				802AAB5B2948F4FC00A57E04 /* Models */,
 				802AAB582948F47000A57E04 /* Resources */,
 			);
@@ -81,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				802AAB452948F42100A57E04 /* MainViewController.swift */,
+				80C273AE294F6D69003872C3 /* ImageViewController.swift */,
+				80C273B0294F74D0003872C3 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,9 +114,17 @@
 		802AAB5B2948F4FC00A57E04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				802AAB592948F4F600A57E04 /* apod.swift */,
+				802AAB592948F4F600A57E04 /* Apod.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		80C273AD294F682C003872C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				80C273AB294F681D003872C3 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				802AAB462948F42100A57E04 /* MainViewController.swift in Sources */,
-				802AAB5A2948F4F600A57E04 /* apod.swift in Sources */,
+				802AAB5A2948F4F600A57E04 /* Apod.swift in Sources */,
+				80C273AC294F681D003872C3 /* NetworkManager.swift in Sources */,
+				80C273B1294F74D0003872C3 /* InfoViewController.swift in Sources */,
 				802AAB422948F42100A57E04 /* AppDelegate.swift in Sources */,
+				80C273AF294F6D69003872C3 /* ImageViewController.swift in Sources */,
 				802AAB442948F42100A57E04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

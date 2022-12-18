@@ -16,31 +16,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJG-nY-HYH">
-                                <rect key="frame" x="98.000000000000014" y="621" width="194.33333333333337" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Парсинг JSON файла"/>
-                                <connections>
-                                    <action selector="getJSON" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7X-pk-Eus"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="j0c-Hh-uZ2">
+                                <rect key="frame" x="16" y="275" width="358" height="123.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJG-nY-HYH">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.80068854850000004" green="0.67120418270000004" blue="0.8018336398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Image">
+                                            <backgroundConfiguration key="background"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getJSON" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7X-pk-Eus"/>
+                                            <segue destination="czr-5A-r0r" kind="presentation" modalPresentationStyle="fullScreen" id="GkM-K8-MF3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKN-3f-Uyh">
+                                        <rect key="frame" x="0.0" y="89.333333333333314" width="358" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="0.80068854850000004" green="0.67120418270000004" blue="0.8018336398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Info"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="4tT-bQ-N7O" kind="presentation" modalPresentationStyle="fullScreen" id="Sqk-kq-Vzg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vJG-nY-HYH" secondAttribute="bottom" constant="154" id="Qvo-jU-UVH"/>
-                            <constraint firstItem="vJG-nY-HYH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u1Z-9z-gxA"/>
+                            <constraint firstItem="j0c-Hh-uZ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NtQ-nY-yvT"/>
+                            <constraint firstItem="j0c-Hh-uZ2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="228" id="RZ2-FM-lEv"/>
+                            <constraint firstItem="j0c-Hh-uZ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UuH-6D-Irm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j0c-Hh-uZ2" secondAttribute="trailing" constant="16" id="axE-bO-oy9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="-38"/>
+            <point key="canvasLocation" x="341.53846153846155" y="-50.473933649289094"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Cqm-gB-Inr">
+            <objects>
+                <viewController id="czr-5A-r0r" customClass="ImageViewController" customModule="NetworkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SiY-OJ-D2e">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4Z-Od-FSo">
+                                <rect key="frame" x="0.0" y="0.0" width="408" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kcE-ip-qYr"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="f4Z-Od-FSo" id="Sbg-sn-3Wj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VmB-e6-qYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-363"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="UgZ-yX-a0L">
+            <objects>
+                <viewController id="4tT-bQ-N7O" customClass="InfoViewController" customModule="NetworkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7t0-QA-rnn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fv-l7-enh">
+                                <rect key="frame" x="16" y="307" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JfF-GU-Zl9"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="0fv-l7-enh" firstAttribute="leading" secondItem="JfF-GU-Zl9" secondAttribute="leading" constant="16" id="51Y-5g-yxE"/>
+                            <constraint firstItem="JfF-GU-Zl9" firstAttribute="trailing" secondItem="0fv-l7-enh" secondAttribute="trailing" constant="16" id="eK7-hS-We0"/>
+                            <constraint firstItem="0fv-l7-enh" firstAttribute="top" secondItem="JfF-GU-Zl9" secondAttribute="top" constant="260" id="nNV-Cc-Tug"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="0fv-l7-enh" id="cik-q1-iFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zba-vW-fZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="299"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
